@@ -9,13 +9,13 @@
 import Foundation
 
 protocol ArticleListModelDelegate: AnyObject {
-    func model(_ model: ArticleListModel, didUpdateArticles articles: [Article])
+    func model(_ model: ArticleListModel, didUpdateArticles articles: [記事])
 }
 
 final class ArticleListModel {
 
     weak var delegate: ArticleListModelDelegate?
-    var articles = [Article]() {
+    var articles = [記事]() {
         didSet {
             delegate?.model(self, didUpdateArticles: articles)
         }
@@ -27,13 +27,13 @@ final class ArticleListModel {
     
     private let baseURL = "https://qiita.com/api/v2/items?page=1&per_page=20&query=body:"
     
-    func title(forRow row: Int) -> String? {
-        return articles[row].title
+    func title(forRow row: Int) -> 文字列? {
+        return articles[row].タイトル
     }
     
     func url(forRow row: Int) -> URL? {
-        if let url = articles[row].url {
-            return URL(string: url)
+        if let url = articles[row].URL {
+            return URL(文字列: url)
         }
         return nil
     }
@@ -59,7 +59,7 @@ final class ArticleListModel {
                 return
             }
             guard let data = data,
-                let articles = try? JSONDecoder().decode([Article].self, from: data) else {
+                let articles = try? JSONDecoder().decode([記事].self, from: data) else {
                     completion(.failure(error: .invalidJSON))
                     return
             }

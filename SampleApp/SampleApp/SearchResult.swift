@@ -9,7 +9,7 @@
 import Foundation
 
 enum SearchResult {
-    case success(word: String, articles: [Article])
+    case success(word: String, articles: [記事])
     case failure(error: SearchError)
 }
 

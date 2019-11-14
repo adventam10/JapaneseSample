@@ -75,7 +75,7 @@ extension ArticleListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ArticleTableViewCell
-        cell.titleLabel.text = model.title(forRow: indexPath.row)
+        cell.titleLabel.text = model.title(forRow: indexPath.row)?.value
         return cell
     }
 }
@@ -115,7 +115,7 @@ extension ArticleListViewController: UISearchBarDelegate {
 }
 
 extension ArticleListViewController: ArticleListModelDelegate {
-    func model(_ model: ArticleListModel, didUpdateArticles articles: [Article]) {
+    func model(_ model: ArticleListModel, didUpdateArticles articles: [記事]) {
         if model.hasArticles {
             hideNoDataLabel()
         } else {
