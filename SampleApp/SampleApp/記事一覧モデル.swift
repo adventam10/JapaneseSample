@@ -8,31 +8,31 @@
 
 import Foundation
 
-protocol ArticleListModelDelegate: AnyObject {
-    func model(_ model: ArticleListModel, didUpdateArticles articles: [記事])
+protocol 記事一覧モデル通知: AnyObject {
+    func モデル(_ モデル: 記事一覧モデル, 記事一覧を更新した 記事一覧: [記事])
 }
 
-final class ArticleListModel {
+final class 記事一覧モデル {
 
-    weak var delegate: ArticleListModelDelegate?
-    var articles = [記事]() {
+    weak var 記事一覧モデル通知: 記事一覧モデル通知?
+    var 記事一覧 = [記事]() {
         didSet {
-            delegate?.model(self, didUpdateArticles: articles)
+            記事一覧モデル通知?.モデル(self, 記事一覧を更新した: 記事一覧)
         }
     }
-    var searchWord = ""
-    var hasArticles: Bool {
-        return !articles.isEmpty
+    var 検索ワード = 文字列("")
+    var 記事一覧がある: Bool {
+        return !記事一覧.isEmpty
     }
     
     private let baseURL = "https://qiita.com/api/v2/items?page=1&per_page=20&query=body:"
     
-    func title(forRow row: Int) -> 文字列? {
-        return articles[row].タイトル
+    func 記事のタイトル(行数: 整数) -> 文字列? {
+        return 記事一覧[行数.value ?? 0].タイトル
     }
     
-    func url(forRow row: Int) -> URL? {
-        if let url = articles[row].URL {
+    func 記事のURL(行数: 整数) -> URL? {
+        if let url = 記事一覧[行数.value ?? 0].URL {
             return URL(文字列: url)
         }
         return nil
