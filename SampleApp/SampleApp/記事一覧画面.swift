@@ -89,15 +89,15 @@ extension 記事一覧画面: 検索バー操作 {
     func 検索バーの検索ボタンをクリックした(_ 検索バー: 検索バー) {
         検索バー.キーボードを閉じる()
         プログレスを表示する()
-        記事一覧用モデル.検索する(検索ワード: 検索バー.テキスト, 完了時の処理: { [weak self] (result) in
+        記事一覧用モデル.検索する(検索ワード: 検索バー.テキスト, 完了時の処理: { [weak self] (検索結果) in
             DispatchQueue.main.async {
                 self?.プログレスを非表示にする()
-                switch result {
-                case .success(let word, let articles):
-                    self?.記事一覧用モデル.検索ワード = 文字列(word)
-                    self?.記事一覧用モデル.記事一覧 = articles
-                case .failure(let error):
-                    self?.アラートを表示する(タイトル: 文字列("取得失敗"), メッセージ: 文字列(error.localizedDescription), ボタン押下時の処理: {
+                switch 検索結果 {
+                case .成功した(let 検索ワード, let 記事一覧):
+                    self?.記事一覧用モデル.検索ワード = 検索ワード
+                    self?.記事一覧用モデル.記事一覧 = 記事一覧
+                case .失敗した(let エラー):
+                    self?.アラートを表示する(タイトル: 文字列("取得失敗"), メッセージ: エラー.エラー内容!, ボタン押下時の処理: {
                         self?.検索バー.テキスト = self?.記事一覧用モデル.検索ワード
                     })
                 }

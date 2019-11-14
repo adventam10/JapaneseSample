@@ -17,7 +17,7 @@
 		0EACFAF6237C1C450076024F /* SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFAF5237C1C450076024F /* SampleAppUITests.swift */; };
 		0EACFB04237C2AB70076024F /* 記事.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB03237C2AB70076024F /* 記事.swift */; };
 		0EACFB06237C6AC40076024F /* 記事一覧モデル.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB05237C6AC40076024F /* 記事一覧モデル.swift */; };
-		0EACFB08237C6AF00076024F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB07237C6AF00076024F /* SearchResult.swift */; };
+		0EACFB08237C6AF00076024F /* 検索結果.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB07237C6AF00076024F /* 検索結果.swift */; };
 		0EACFB0A237C6B3F0076024F /* String+urlEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB09237C6B3F0076024F /* String+urlEncode.swift */; };
 		0EACFB0C237C6C440076024F /* 記事テーブルセル.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */; };
 		0EACFB0F237D6FEA0076024F /* UIWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB0E237D6FEA0076024F /* UIWrappers.swift */; };
@@ -58,7 +58,7 @@
 		0EACFAF7237C1C450076024F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EACFB03237C2AB70076024F /* 記事.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事.swift"; sourceTree = "<group>"; };
 		0EACFB05237C6AC40076024F /* 記事一覧モデル.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事一覧モデル.swift"; sourceTree = "<group>"; };
-		0EACFB07237C6AF00076024F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0EACFB07237C6AF00076024F /* 検索結果.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "検索結果.swift"; sourceTree = "<group>"; };
 		0EACFB09237C6B3F0076024F /* String+urlEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+urlEncode.swift"; sourceTree = "<group>"; };
 		0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事テーブルセル.swift"; sourceTree = "<group>"; };
 		0EACFB0E237D6FEA0076024F /* UIWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWrappers.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */,
 				0EACFB05237C6AC40076024F /* 記事一覧モデル.swift */,
 				0EACFB03237C2AB70076024F /* 記事.swift */,
-				0EACFB07237C6AF00076024F /* SearchResult.swift */,
+				0EACFB07237C6AF00076024F /* 検索結果.swift */,
 				0EACFB09237C6B3F0076024F /* String+urlEncode.swift */,
 				0EACFAD9237C1C380076024F /* Main.storyboard */,
 				0EACFADC237C1C450076024F /* Assets.xcassets */,
@@ -295,7 +295,7 @@
 				0EACFB0C237C6C440076024F /* 記事テーブルセル.swift in Sources */,
 				0EACFAD4237C1C380076024F /* AppDelegate.swift in Sources */,
 				0EACFB11237D70010076024F /* FoundationWrappers.swift in Sources */,
-				0EACFB08237C6AF00076024F /* SearchResult.swift in Sources */,
+				0EACFB08237C6AF00076024F /* 検索結果.swift in Sources */,
 				0EACFB0F237D6FEA0076024F /* UIWrappers.swift in Sources */,
 				0EACFAD6237C1C380076024F /* SceneDelegate.swift in Sources */,
 			);
