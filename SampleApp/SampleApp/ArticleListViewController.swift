@@ -74,9 +74,9 @@ extension ArticleListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ArticleTableViewCell
-        cell.titleLabel.text = model.title(forRow: indexPath.row)?.value
-        return cell
+        let セル = tableView.dequeueReusableCell(withIdentifier: "記事", for: indexPath) as! 記事テーブルセル
+        セル.タイトルラベル.テキスト = model.title(forRow: indexPath.row)
+        return セル
     }
 }
 

@@ -19,7 +19,7 @@
 		0EACFB06237C6AC40076024F /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB05237C6AC40076024F /* ArticleListModel.swift */; };
 		0EACFB08237C6AF00076024F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB07237C6AF00076024F /* SearchResult.swift */; };
 		0EACFB0A237C6B3F0076024F /* String+urlEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB09237C6B3F0076024F /* String+urlEncode.swift */; };
-		0EACFB0C237C6C440076024F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB0B237C6C440076024F /* ArticleTableViewCell.swift */; };
+		0EACFB0C237C6C440076024F /* 記事テーブルセル.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */; };
 		0EACFB0F237D6FEA0076024F /* UIWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB0E237D6FEA0076024F /* UIWrappers.swift */; };
 		0EACFB11237D70010076024F /* FoundationWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFB10237D70010076024F /* FoundationWrappers.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		0EACFB05237C6AC40076024F /* ArticleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListModel.swift; sourceTree = "<group>"; };
 		0EACFB07237C6AF00076024F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0EACFB09237C6B3F0076024F /* String+urlEncode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+urlEncode.swift"; sourceTree = "<group>"; };
-		0EACFB0B237C6C440076024F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事テーブルセル.swift"; sourceTree = "<group>"; };
 		0EACFB0E237D6FEA0076024F /* UIWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWrappers.swift; sourceTree = "<group>"; };
 		0EACFB10237D70010076024F /* FoundationWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationWrappers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +116,7 @@
 				0EACFAD3237C1C380076024F /* AppDelegate.swift */,
 				0EACFAD5237C1C380076024F /* SceneDelegate.swift */,
 				0EACFAD7237C1C380076024F /* ArticleListViewController.swift */,
-				0EACFB0B237C6C440076024F /* ArticleTableViewCell.swift */,
+				0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */,
 				0EACFB05237C6AC40076024F /* ArticleListModel.swift */,
 				0EACFB03237C2AB70076024F /* 記事.swift */,
 				0EACFB07237C6AF00076024F /* SearchResult.swift */,
@@ -292,7 +292,7 @@
 				0EACFB0A237C6B3F0076024F /* String+urlEncode.swift in Sources */,
 				0EACFB04237C2AB70076024F /* 記事.swift in Sources */,
 				0EACFAD8237C1C380076024F /* ArticleListViewController.swift in Sources */,
-				0EACFB0C237C6C440076024F /* ArticleTableViewCell.swift in Sources */,
+				0EACFB0C237C6C440076024F /* 記事テーブルセル.swift in Sources */,
 				0EACFAD4237C1C380076024F /* AppDelegate.swift in Sources */,
 				0EACFB11237D70010076024F /* FoundationWrappers.swift in Sources */,
 				0EACFB08237C6AF00076024F /* SearchResult.swift in Sources */,
