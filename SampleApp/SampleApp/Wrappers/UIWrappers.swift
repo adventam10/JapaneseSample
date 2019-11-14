@@ -255,7 +255,9 @@ class アプリケーション: UIApplication {
     class var 共通のやつ: UIApplication {
         return UIApplication.shared
     }
-    
+}
+
+extension UIApplication {
     func URLを開く(_ URL: URL) {
         open(URL)
     }

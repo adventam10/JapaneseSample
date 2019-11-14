@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EACFAD4237C1C380076024F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFAD3237C1C380076024F /* AppDelegate.swift */; };
 		0EACFAD6237C1C380076024F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFAD5237C1C380076024F /* SceneDelegate.swift */; };
-		0EACFAD8237C1C380076024F /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFAD7237C1C380076024F /* ArticleListViewController.swift */; };
+		0EACFAD8237C1C380076024F /* 記事一覧画面.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EACFAD7237C1C380076024F /* 記事一覧画面.swift */; };
 		0EACFADB237C1C380076024F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EACFAD9237C1C380076024F /* Main.storyboard */; };
 		0EACFADD237C1C450076024F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EACFADC237C1C450076024F /* Assets.xcassets */; };
 		0EACFAE0237C1C450076024F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EACFADE237C1C450076024F /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		0EACFAD0237C1C380076024F /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EACFAD3237C1C380076024F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EACFAD5237C1C380076024F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EACFAD7237C1C380076024F /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		0EACFAD7237C1C380076024F /* 記事一覧画面.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事一覧画面.swift"; sourceTree = "<group>"; };
 		0EACFADA237C1C380076024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EACFADC237C1C450076024F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EACFADF237C1C450076024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			children = (
 				0EACFAD3237C1C380076024F /* AppDelegate.swift */,
 				0EACFAD5237C1C380076024F /* SceneDelegate.swift */,
-				0EACFAD7237C1C380076024F /* ArticleListViewController.swift */,
+				0EACFAD7237C1C380076024F /* 記事一覧画面.swift */,
 				0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */,
 				0EACFB05237C6AC40076024F /* ArticleListModel.swift */,
 				0EACFB03237C2AB70076024F /* 記事.swift */,
@@ -291,7 +291,7 @@
 				0EACFB06237C6AC40076024F /* ArticleListModel.swift in Sources */,
 				0EACFB0A237C6B3F0076024F /* String+urlEncode.swift in Sources */,
 				0EACFB04237C2AB70076024F /* 記事.swift in Sources */,
-				0EACFAD8237C1C380076024F /* ArticleListViewController.swift in Sources */,
+				0EACFAD8237C1C380076024F /* 記事一覧画面.swift in Sources */,
 				0EACFB0C237C6C440076024F /* 記事テーブルセル.swift in Sources */,
 				0EACFAD4237C1C380076024F /* AppDelegate.swift in Sources */,
 				0EACFB11237D70010076024F /* FoundationWrappers.swift in Sources */,
