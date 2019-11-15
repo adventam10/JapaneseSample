@@ -44,7 +44,7 @@ final class 記事一覧モデル {
             完了時の処理(.成功した(検索ワード: 文字列(""), 記事一覧: []))
             return
         }
-        guard let url = URL(文字列: 文字列(記事検索URL.value ?? "" + (検索ワード.value?.urlEncode() ?? ""))) else {
+        guard let url = URL(文字列: 記事検索URL + 検索ワード.URLエンコードする()) else {
             完了時の処理(.失敗した(エラー: .URL不正))
             return
         }

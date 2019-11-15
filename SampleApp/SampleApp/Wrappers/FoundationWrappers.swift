@@ -31,6 +31,16 @@ struct 文字列: EquatableValueWrapper {
     }
 }
 
+func + (lhs: 文字列, rhs: 文字列) -> 文字列 {
+    if let lhsText = lhs.value, let rhsText = rhs.value {
+        return 文字列(lhsText + rhsText)
+    }
+    if let lhsText = lhs.value {
+        return 文字列(lhsText)
+    }
+    return 文字列(rhs.value)
+}
+
 struct 整数: EquatableValueWrapper {
     typealias Value = Int
     var value: Int?
