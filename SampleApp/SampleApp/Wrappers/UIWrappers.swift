@@ -263,7 +263,7 @@ extension UIApplication {
     }
 }
 
-struct 位置: LiteralWrapper {
+struct 位置: EquatableValueWrapper {
     typealias Value = CGPoint
     var value: CGPoint?
     init() {

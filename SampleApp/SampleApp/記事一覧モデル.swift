@@ -48,23 +48,23 @@ final class 記事一覧モデル {
             完了時の処理(.失敗した(エラー: .URL不正))
             return
         }
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            if let error = error {
-                完了時の処理(.失敗した(エラー: .サーバー(error)))
+        let 通信処理 = URLセッション.共通のやつ.通信処理を作成する(URL: url) {(データ, レスポンス, エラー) in
+            if let エラー = エラー {
+                完了時の処理(.失敗した(エラー: .サーバー(エラー)))
                 return
             }
-            if let httpResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode != 200 {
+            if let HTTPステータスコード = レスポンス?.HTTPステータスコード,
+                HTTPステータスコード != 整数(200) {
                 完了時の処理(.失敗した(エラー: .通信環境))
                 return
             }
-            guard let data = data,
-                let 記事一覧 = try? JSONDecoder().decode([記事].self, from: data) else {
+            guard let データ = データ,
+                let 記事一覧 = try? JSONデコーダー().デコードする([記事].self, デコードするデータ: データ) else {
                     完了時の処理(.失敗した(エラー: .JSON不正))
                     return
             }
             完了時の処理(.成功した(検索ワード: 検索ワード, 記事一覧: 記事一覧))
         }
-        task.resume()
+        通信処理.開始する()
     }
 }
