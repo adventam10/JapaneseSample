@@ -24,6 +24,7 @@ extension ValueWrapper {
 
 protocol EquatableValueWrapper: ValueWrapper, Equatable {
 }
+
 struct 文字列: EquatableValueWrapper {
     typealias Value = String
     var value: String?
@@ -182,5 +183,27 @@ enum JSONデコードエラー: Error {
 func メインスレッドで処理する(処理: @escaping() -> Void) {
     DispatchQueue.main.async {
          処理()
+    }
+}
+
+struct 配列<要素>: ValueWrapper {
+    typealias Value = [要素]
+    var value: [要素]?
+    init() {
+    }
+    
+    var 空である: 正誤 {
+        return 正誤(value?.isEmpty == true)
+    }
+    
+    var 要素数: 整数 {
+        return 整数(value?.count ?? 0)
+    }
+    
+    func 指定の番号の要素を取り出す(番号: 整数) -> 要素? {
+        guard let index =  番号.value else {
+            return nil
+        }
+        return value?[index]
     }
 }
