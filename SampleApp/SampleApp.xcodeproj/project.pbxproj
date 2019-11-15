@@ -90,6 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E94AFB7237EDFFB00A63C05 /* 日本語ソース */ = {
+			isa = PBXGroup;
+			children = (
+				0EACFAD7237C1C380076024F /* 記事一覧画面.swift */,
+				0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */,
+				0EACFB05237C6AC40076024F /* 記事一覧モデル.swift */,
+				0EACFB03237C2AB70076024F /* 記事.swift */,
+				0EACFB07237C6AF00076024F /* 検索結果.swift */,
+				0EACFB09237C6B3F0076024F /* 文字列機能拡張.swift */,
+			);
+			path = "日本語ソース";
+			sourceTree = "<group>";
+		};
+		0E94AFB8237EE02E00A63C05 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0EACFAD9237C1C380076024F /* Main.storyboard */,
+				0EACFADC237C1C450076024F /* Assets.xcassets */,
+				0EACFADE237C1C450076024F /* LaunchScreen.storyboard */,
+				0EACFAE1237C1C450076024F /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		0EACFAC7237C1C380076024F = {
 			isa = PBXGroup;
 			children = (
@@ -115,16 +139,8 @@
 			children = (
 				0EACFAD3237C1C380076024F /* AppDelegate.swift */,
 				0EACFAD5237C1C380076024F /* SceneDelegate.swift */,
-				0EACFAD7237C1C380076024F /* 記事一覧画面.swift */,
-				0EACFB0B237C6C440076024F /* 記事テーブルセル.swift */,
-				0EACFB05237C6AC40076024F /* 記事一覧モデル.swift */,
-				0EACFB03237C2AB70076024F /* 記事.swift */,
-				0EACFB07237C6AF00076024F /* 検索結果.swift */,
-				0EACFB09237C6B3F0076024F /* 文字列機能拡張.swift */,
-				0EACFAD9237C1C380076024F /* Main.storyboard */,
-				0EACFADC237C1C450076024F /* Assets.xcassets */,
-				0EACFADE237C1C450076024F /* LaunchScreen.storyboard */,
-				0EACFAE1237C1C450076024F /* Info.plist */,
+				0E94AFB8237EE02E00A63C05 /* Resource */,
+				0E94AFB7237EDFFB00A63C05 /* 日本語ソース */,
 				0EACFB0D237D6F9D0076024F /* Wrappers */,
 			);
 			path = SampleApp;
@@ -472,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5QW7TLM9U;
-				INFOPLIST_FILE = SampleApp/Info.plist;
+				INFOPLIST_FILE = SampleApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5QW7TLM9U;
-				INFOPLIST_FILE = SampleApp/Info.plist;
+				INFOPLIST_FILE = SampleApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
