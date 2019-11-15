@@ -30,6 +30,10 @@ struct 文字列: EquatableValueWrapper {
     var value: String?
     init() {
     }
+    
+    var 空である: 正誤 {
+        return 正誤(value?.isEmpty)
+    }
 }
 
 func + (lhs: 文字列, rhs: 文字列) -> 文字列 {

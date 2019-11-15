@@ -39,7 +39,7 @@ final class 記事一覧モデル {
     
     func 検索する(検索ワード: 文字列?,
                 完了時の処理: @escaping (検索結果) -> Void) {
-        guard let 検索ワード = 検索ワード, 検索ワード.value?.isEmpty == false else {
+        guard let 検索ワード = 検索ワード, 検索ワード.空である == 正誤(false) else {
             完了時の処理(.成功した(検索ワード: 文字列(""), 記事一覧: 配列([])))
             return
         }
