@@ -11,8 +11,8 @@ import Foundation
 extension 文字列 {
     func URLエンコードする() -> 文字列 {
         let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
-        let removed = self.value?.removingPercentEncoding ?? self.value
-        let text = removed?.addingPercentEncoding(withAllowedCharacters: charset) ?? removed
+        let removed = self.value.removingPercentEncoding ?? self.value
+        let text = removed.addingPercentEncoding(withAllowedCharacters: charset) ?? removed
         return 文字列(text)
     }
 }
