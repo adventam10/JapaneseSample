@@ -25,7 +25,7 @@ protocol 画面の共通機能: AnyObject {
 
 extension 画面表示部品の共通機能 where Self: UIViewController {
     func 画面を表示する(_ 表示する画面: 画面表示部品の共通機能, アニメーションさせる: 正誤, 表示完了時の処理: (() -> Void)? = nil) {
-        present(表示する画面 as! UIViewController, animated: アニメーションさせる.value, completion: 表示完了時の処理)
+        present(表示する画面 as! UIViewController, animated: アニメーションさせる.値, completion: 表示完了時の処理)
     }
 }
 
@@ -45,7 +45,7 @@ class アラート: UIAlertController, 画面表示部品の共通機能 {
     }
 
     class func アラートを作成する(タイトル: 文字列?, メッセージ: 文字列?, スタイル: スタイル) -> アラート {
-        return アラート(title: タイトル?.value, message: メッセージ?.value, preferredStyle: スタイル.アラートスタイルに変換)
+        return アラート(title: タイトル?.値, message: メッセージ?.値, preferredStyle: スタイル.アラートスタイルに変換)
     }
 
     func アクションを追加する(_ アクション: アラートアクション) {
@@ -72,7 +72,7 @@ class アラートアクション: UIAlertAction {
     }
 
     class func アクションを作成する(タイトル: 文字列?, スタイル: スタイル, ボタン押下時の処理: (() -> Void)? = nil) -> アラートアクション {
-        return アラートアクション(title: タイトル?.value, style: スタイル.アラートアクションスタイルに変換,
+        return アラートアクション(title: タイトル?.値, style: スタイル.アラートアクションスタイルに変換,
                                            handler: { _ in ボタン押下時の処理?() })
     }
 }
@@ -83,7 +83,7 @@ protocol 画面表示部品の共通機能: AnyObject {
 extension 画面表示部品の共通機能 where Self: UIView {
     var 非表示にする: 正誤 {
         set {
-            isHidden = newValue.value
+            isHidden = newValue.値
         }
         get {
             return 正誤(isHidden)
@@ -98,7 +98,7 @@ class インジケーター: UIActivityIndicatorView, 画面表示部品の共�
 
     var 停止中は非表示にする: 正誤 {
         set {
-            hidesWhenStopped = newValue.value
+            hidesWhenStopped = newValue.値
         }
         get {
             return 正誤(hidesWhenStopped)
@@ -118,7 +118,7 @@ class ラベル: UILabel, 画面表示部品の共通機能 {
 
     var テキスト: 文字列? {
         set {
-            text = newValue?.value
+            text = newValue?.値
         }
         get {
             return 文字列(text)
@@ -145,12 +145,12 @@ class テーブル: UITableView, 画面表示部品の共通機能 {
     }
     
     func 再利用セルを作成する(識別子: 文字列, セクションと行数: セクションと行数) -> テーブルセル {
-        return dequeueReusableCell(withIdentifier: 識別子.value,
-                                   for: セクションと行数.value) as! テーブルセル
+        return dequeueReusableCell(withIdentifier: 識別子.値,
+                                   for: セクションと行数.値) as! テーブルセル
     }
 
     func スクロール位置を調整する(_ 位置: 位置, アニメーションさせる: 正誤) {
-        setContentOffset(位置.value, animated: アニメーションさせる.value )
+        setContentOffset(位置.値, animated: アニメーションさせる.値)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -177,7 +177,7 @@ extension テーブル: UITableViewDelegate {
 
 extension テーブル: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return テーブルに表示するデータを生成するやつ?.テーブル(self, セクション内行数: 整数(section)).value ?? 0
+        return テーブルに表示するデータを生成するやつ?.テーブル(self, セクション内行数: 整数(section)).値 ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -199,7 +199,7 @@ class 検索バー: UISearchBar, 画面表示部品の共通機能 {
     
     var キャンセルボタンを表示する: 正誤 {
         set {
-            showsCancelButton = newValue.value
+            showsCancelButton = newValue.値
         }
         get {
             return 正誤(showsCancelButton)
@@ -208,7 +208,7 @@ class 検索バー: UISearchBar, 画面表示部品の共通機能 {
     
     var テキスト（仮）: 文字列? {
         set {
-            placeholder = newValue?.value
+            placeholder = newValue?.値
         }
         get {
             return 文字列(placeholder)
@@ -217,7 +217,7 @@ class 検索バー: UISearchBar, 画面表示部品の共通機能 {
     
     var テキスト: 文字列? {
         set {
-            text = newValue?.value
+            text = newValue?.値
         }
         get {
             return 文字列(text)
@@ -266,8 +266,8 @@ extension UIApplication {
 }
 
 struct 位置: EquatableValueWrapper {
-    typealias Value = CGPoint
-    var value: CGPoint = .zero
+    typealias 値の型 = CGPoint
+    var 値: CGPoint = .zero
     init() {
     }
 }

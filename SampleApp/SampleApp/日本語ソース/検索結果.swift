@@ -15,8 +15,8 @@ enum 検索結果 {
 
 enum 検索エラー: Error {
     case URL不正
-    case 通信環境
-    case サーバー(エラー)
+    case 通信環境(エラー)
+    case サーバー
     case JSON不正
     
     var エラー内容: 文字列? {
@@ -25,8 +25,8 @@ enum 検索エラー: Error {
             return 文字列("不正なURLです。")
         case .通信環境:
             return 文字列("通信に失敗しました。ネットワークの接続を確認してください。")
-        case .サーバー(let エラー):
-            return エラー.エラー内容
+        case .サーバー:
+            return 文字列("サーバーエラーです。しばらく時間をおいて再度お試しください。")
         case .JSON不正:
             return 文字列("JSONパースに失敗しました。")
         }
